@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS -Filters</title> 
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+		Filters: <br>
+		UpperCase:<input type="text" ng-model='name'> <h5>FullName: {{name | uppercase }} </h5> <br>
+		LowerCase:<textarea ng-model='words'></textarea><br> <p>About: {{words | lowercase}}</p><br>
+		Currency:<input type="text" ng-model='curr'><br>Salary : {{curr | currency:"Rs. ":1}}<br> 
+	<!-- // by default it is set to $ but we can change it as well as the decimal spaces too, by default decimal space is set to 2 -->
+		
+
+
+	<script></script>
+</body>
+</html>

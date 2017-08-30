@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AngularJS - Http Services	</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js"></script> 
+	 <!--For routing use this ngRoute version - 1.2.0, or install ngRoute for upgraded versions-->
+	<script src="11-Controller.js"></script>
+	<style>
+		table,th,td {
+			border: 1px solid black
+		}
+	</style>
+</head>
+
+<body ng-app="AngularServices">
+	<div ng-controller="ServicesController">
+		<ul>
+			<h3> Information of people in The ADAPT Society</h3><br>
+			<!-- 	Name          :       Age          :      Contact      :    Nationality  <br>
+		<li ng-repeat="person in people">
+			{{person.Name}}  : {{person.Age}} : {{person.Contact}} : {{person.Nationality}} <br>
+		</li> -->
+		
+			<table>
+				<tr>
+					<th>
+						Name	
+					</th>
+					<th>
+						Age
+					</th>
+					<th>
+						Contact
+					</th>
+					<th>
+						Nationality
+					</th>
+					<th>
+						CNIC
+					</th>					
+				</tr>				
+				<tr ng-repeat="person in people">
+				<td>
+					{{person.Name}}
+				</td>
+				<td>
+					{{person.Age}}
+				</td>
+				<td>
+					{{person.Contact}}
+				</td>
+				<td>
+					{{person.Nationality}}
+				</td>
+				<td>
+					{{person.CNIC}}
+				</td>
+				</tr>
+			</table>
+		</ul>
+
+	</div>
+
+</body>
+</html>		
+<!-- For this angular script file we will be needing some raw data, so we have created 11-Data.json file in the directory and inserted some records in it....-->

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS -Expressions with default values using 'ng-init' and 'ng-repeat' directive</title> 
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-app="">
+	<div  ng-init="language='AngularJS'">
+	Your programming language: <input type="text" ng-model="language"> <br/>
+	<br/>
+	{{language}}
+	</div>
+	<h2>
+	Some other languages are:
+	</h2><br>
+ 	<div ng-init="myFavLang=[{name:'Python',extension:'.py'},{name:'AngularJS',extension:'.html'},{name:'Asp.net',extension:'.aspx'},
+ 	 {name:'Sql Server',extension:'.sql'}]" >
+ 	 	<p ng-repeat="favlang in myFavLang"> 
+ 	 		Name: {{favlang.name}} <br>
+ 	 		Extension : {{favlang.extension}}<br>
+
+ 	 	</p>
+
+ 	 </div>
+
+
+
+</body>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AngularController">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS -Controllers</title> 
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body >
+	<div ng-controller="controller1">
+		Select your favourite programming language : <br>
+		<button ng-click="Python()" style="width: 120px">Python</button><br>
+		<button ng-click="Asp()" style="width: 120px">ASP</button><br>
+		<button ng-click="Java()" style="width: 120px">Java</button><br>
+		<button ng-click="SqlServer()" style="width: 120px">Sql Server</button>	<br>
+		<p> Your favourite language is : {{favLang}} </p>
+	</div>
+
+	<script>
+		 var apple= angular.module('AngularController',[]);		
+		 apple.controller('controller1',function($scope){
+		 	$scope.favLang = 'None'; // Default value of favLang variable
+		 	$scope.Python= function()
+		 	{
+		 		$scope.favLang= 'Python';
+		 	};
+		 	$scope.Asp= function()
+			{
+				$scope.favLang='Asp.Net';
+			};
+			$scope.Java=function()
+			{
+				$scope.favLang='Java';
+			};		
+			$scope.SqlServer=function()
+			{
+				$scope.favLang='Sql Server';
+			};
+
+		 });
+		  // angular.module takes 2 agrument. 1 is the name of the application 2 is the blank array to handle dependencies. 		 
+		 //apple.Controller takes 2 arguments. 1 is the name of the controller you have given above, 2 is the funtion or a blank array.
+		 // $scope is a variable that is used to access the other defined functions and varibles inside the controller.
+	</script>
+
+</body>
+</html>

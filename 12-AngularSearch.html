@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AngularJS - Seach Box</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js"></script> 
+	 <!--For routing use this ngRoute version - 1.2.0, or install ngRoute for upgraded versions-->
+	<script src="11-Controller.js"></script>
+	<style>
+		table,th,td {
+			border: 1px solid black
+		}
+	</style>
+</head>
+
+<body ng-app="AngularSearch">
+	<div ng-controller="SearchController">
+		<ul>
+			<h3> Information of people in The ADAPT Society</h3><br>
+		<table>
+			<tr>
+				<th colspan="2">
+				INFORMATION SEARCH
+				</th>
+			</tr>
+			<tr>
+				<th>
+					Global Search :
+				</th>
+				<td>
+						<input type="text" ng-model="searchBox.$">	
+				</td>
+			</tr>
+			<tr>
+				<th>
+				Name Search:
+				</th>					
+				<td>
+				<input type="text" ng-model="searchBox.Name">
+				</td>
+			</tr>
+			<tr>
+				<th>
+				Age Search:
+				</th>
+				<td>
+						<input type="text" ng-model="searchBox.Age">
+				</td>
+			</tr>
+			<tr>
+				<th>
+				Contact Search:
+				</th>
+				<td>
+						<input type="text" ng-model="searchBox.Contact">
+				</td>
+			</tr>
+			<tr>
+				<th>
+				Nationality Search:
+				</th>
+				<td>
+						<input type="text" ng-model="searchBox.Nationality">
+				</td>
+			</tr>
+			<tr>
+				<th>
+				CNIC Search:
+				</th>
+				<td>
+						<input type="text" ng-model="searchBox.CNIC">
+				</td>
+			</tr>
+		</table>
+			<br>
+			 	Name          :       Age          :      Contact      :    Nationality     : CNIC    <br>
+		<li ng-repeat="person in people | filter:searchBox">
+			{{person.Name}}  : {{person.Age}} : {{person.Contact}} : {{person.Nationality}}  : {{person.CNIC}} <br>
+		</li>
+		<br>
+		<br>
+			<table>
+			<tr>
+			<th colspan="5">
+			EMPLOYEE INFORMAITON
+			</th>
+			</tr>
+				<tr>
+					<th>
+						Name	
+					</th>
+					<th>
+						Age
+					</th>
+					<th>
+						Contact
+					</th>
+					<th>
+						Nationality
+					</th>
+					<th>
+						CNIC
+					</th>					
+				</tr>				
+				<tr ng-repeat="person in people | filter:searchBox">
+
+					<td>
+							{{person.Name}}
+					</td>
+					<td>
+							{{person.Age}}
+					</td>
+					<td>
+							{{person.Contact}}
+					</td>
+					<td>
+							{{person.Nationality}}
+					</td>
+					<td>
+							{{person.CNIC}}
+					</td>
+				</tr>
+			</table>
+		</ul>
+
+	</div>
+
+</body>
+</html>		
+<!-- For this angular script file we will be needing some raw data, so we have created 11-Data.json file in the directory and inserted some records in it....-->

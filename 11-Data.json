@@ -1,0 +1,51 @@
+{
+	"records":[
+	{
+		"Name": "Zohaib Hasan Nizami",
+		"Age": "23",
+		"Contact":"03144431234",
+		"Nationality": "Pakistani",
+		"CNIC" :"424512355356463"
+
+	},
+	{	
+		"Name": "Hassan Khan",
+		"Age": "19",
+		"Contact":"03356742345",
+		"Nationality": "Arabian",
+		"CNIC" :"424512351236463"
+	},
+	{
+		"Name": "Noman Khan",
+		"Age": "21",
+		"Contact":"03245523435",
+		"Nationality": "American",
+		"CNIC" :"424512355356589"
+	},
+	{
+		"Name": "Mohsin Khan",
+		"Age": "20",
+		"Contact":"03050634321",
+		"Nationality": "Pakistani",
+		"CNIC" :"998512355356463"
+
+	},
+	{
+		"Name": "Bilal Sheikh",
+		"Age": "24",
+		"Contact":"03666534312",
+		"Nationality": "Pakistani",
+		"CNIC" :"424512366624783"
+	},
+	{
+		"Name": "Mohammad Farhan",
+		"Age": "29",
+		"Contact": "03334356653",
+		"Nationality": "Pakistani",
+		"CNIC" :"678904321567449"
+	}
+
+
+
+	]
+}
