@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AngularJS - Services</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js"></script> 
+	 <!--For routing use this ngRoute version - 1.2.0, or install ngRoute for upgraded versions-->
+	<script src="15-Controller.js"></script>
+	<style>
+		table,th,td {
+			border: 1px solid black
+		}
+	</style>
+</head>
+<body ng-app="AngularSer" ng-controller="SerController">
+	<div> {{RandomNo1}} <br>
+		<!-- <input type="button" value="Generate New Random No.">  -->
+		<button type="button" ng-click="generateNo()">Generate No.</button>
+	</div> 
+</body>
+</html>

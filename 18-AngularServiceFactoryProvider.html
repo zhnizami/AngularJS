@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AngularJS - Service - Factory - Provider</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js"></script> 
+	 <!--For routing use this ngRoute version - 1.2.0, or install ngRoute for upgraded versions-->
+	<script src="18-Controller.js"></script>
+	<style>
+		table,th,td {
+			border: 1px solid black
+		}
+	</style>
+</head>
+<body ng-app="AngularSFP" ng-controller="SFPController">
+	<table>
+		<tr>
+		<th colspan="3">
+		Random Number Generator
+		</th>
+		</tr>
+		<tr>
+		<th>
+		Random No. by Service :
+ 		</th>
+		<td>
+		<b><i> {{random1}}</i></b>
+		</td>
+		<td>
+		<button type="button" ng-click="generateService()" style="width: 100%">Service</button>
+		</td>
+		</tr>
+		<tr>
+		<th>
+		Random No. by Factory :
+ 		</th>
+		<td>
+		<b><i> {{random2}}</i></b>
+		</td>
+		<td>
+		<button type="button" ng-click="generateFactory()" style="width: 100%">Factory</button>
+		</td>
+		</tr>
+		<tr>
+		<th>
+		Random No. by Provider :
+ 		</th>
+		<td>
+		<b><i> {{random3}}</i></b>
+		</td>
+		<td>
+		<button type="button" ng-click="generateProvider()" style="width: 100%">Provider</button>
+		</td>
+		</tr>
+		<tr>
+		<th>
+		Hello 
+		</th>
+		<td colspan="2">
+		<i> {{fname}} </i>!
+		</td>
+		</tr>
+		<tr>
+		<td colspan="3">
+			<button type="button" ng-click="sayhello()" style="width: 100%">Say Hi!</button>
+		</td>
+		</tr>
+	</table>
+	
+
+</body>
+</html>
